@@ -6,9 +6,12 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:46:31 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/23 12:51:11 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/23 13:20:23 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+
+# include <stdargs.h>
+# include <stdlib.h>

@@ -1,4 +1,5 @@
 {
     "42header.email": "gneve@student.s19.be",
-    "42header.username": "gneve"
+    "42header.username": "gneve",
+    "editor.detectIndentation": false
 }
