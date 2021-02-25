@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 21:07:17 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 21:10:03 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 typedef	int t_bitflag;
 
-enum e_bitflags
+enum 		e_bitflags
 {
 	F_SPC = 1,
 	F_ZRO = (1 << 1),
