@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 21:15:17 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 21:35:14 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ enum		e_bitflags
 	F_ZRO = (1 << 2),
 	F_NEG = (1 << 3),
 	F_DOT = (1 << 4),
-	F_STAR = (1 << 5),
+	F_STAR = (1 << 5)
 };
 
 typedef struct	s_printtread
@@ -34,7 +34,7 @@ typedef struct	s_printtread
 	t_bitflag	flags;
 	int			width;
 	int			precs;
-	int			count;
+	int			strpos;
 	int			wordcount;
 	va_list		format;
 }				t_print;
