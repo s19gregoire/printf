@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:48:13 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/24 23:25:56 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 12:54:41 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,13 +96,12 @@ static ft_print_dispatch_f const ft_print_dispatch[256] = {
 	['X'] = ft_printf_X,
 	['s'] = ft_printf_s,
 };
-
-static int ft_printf_lenght(const char *fmt, va_list ap, int len) {
-	int c;
-
-	while (*fmt)
-	{
-		c = (unsigned char)*fmt++;
+static int ft_while(const char *fmt, va_list ap, int len)
+{
+    int c;
+    while (*fmt)
+    {
+        c = (unsigned char)*fmt++;
 		if (c != '%') {
 			ft_putchar(c);
 			len++;
@@ -117,7 +116,12 @@ static int ft_printf_lenght(const char *fmt, va_list ap, int len) {
 				return ft_print_dispatch[c](fmt, ap, len);
 			}
 		}
-	}
+    }
+    return (len);
+}
+static int ft_printf_lenght(const char *fmt, va_list ap, int len) {
+    
+	len = ft_while(fmt, ap, len);
 	return len;
 }
 
@@ -135,8 +139,7 @@ int ft_printf(const char *string, ...) {
 }
 
 #include <stdio.h>
-
-#define TEST "%s", "gregoire neve"
+#define TEST "%d", F_NEG
 int main(void)
 {
     printf("\n stdio  %d\n", printf(TEST));
