@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 20:03:54 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 20:26:53 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 20:28:38 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ t_flagstread	ft_flags_initiator(void)
 	flags.dotzero = 0;
 	flags.dotstar = 0;
 	flags.type = 0;
+	return (flags);
 }
