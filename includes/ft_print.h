@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 21:38:52 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 21:42:54 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ enum		e_bitflags
 typedef struct	s_printtread
 {
 	t_bitflag	flags;
-	va_list		format;
+	va_list		args;
 	int			width;
 	int			precs;
 	int			strpos;
