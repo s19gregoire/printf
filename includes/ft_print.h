@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 19:42:56 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 19:43:11 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ typedef struct	s_print
 	const char	*chardata;
 }				t_print;
 
-char	*ft_strdup(const char *src);
+char			*ft_strdup(const char *src);
 #endif
