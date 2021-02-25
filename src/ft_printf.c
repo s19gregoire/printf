@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:23:44 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 21:48:33 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 21:51:53 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int				ft_printf(const char *fmt, ...)
 	t_print		data;
 	const char	*stringdata;
 
-	va_start(data.args);
+	va_start(data.args, fmt);
 	data = (t_print){0, NULL, 0, 0, 0, 0};
 	while (fmt[data.strpos])
 	{
