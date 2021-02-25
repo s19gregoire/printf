@@ -3,6 +3,7 @@
     "42header.username": "gneve",
     "editor.insertSpaces": false,
     "files.associations": {
-        "ft_print.h": "c"
+        "ft_print.h": "c",
+        "stdarg.h": "c"
     }
 }
