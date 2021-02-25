@@ -6,9 +6,19 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 18:32:16 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 18:51:30 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINT_H
+# define FT_PRINT_H
+
+# include "stdarg.h"
+
+typedef struct	s_print
+{
+	va_list		format;
+	int			width;
+}				t_print;
+
 #endif

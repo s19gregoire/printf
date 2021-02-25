@@ -6,8 +6,13 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:23:44 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 18:30:10 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 18:48:44 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_printf(const char *string, ...)
+#include "ft_print.h"
+
+int	ft_printf(const char *string, ...)
+{
+	
+}
