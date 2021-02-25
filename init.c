@@ -1,36 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.h                                         :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 20:04:29 by gneve            ###   ########.fr       */
+/*   Created: 2021/02/25 20:03:54 by gneve             #+#    #+#             */
+/*   Updated: 2021/02/25 20:04:50 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINT_H
-# define FT_PRINT_H
-
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-typedef struct	s_printtread
-{
-	int			width;
-	int			counter;
-	va_list		format;
-}				t_print;
-typedef struct	s_flagstread
-{
-	int			dotminus;
-	int			dotzero;
-	int			dotpoint;
-	int			dotstar;
-}				t_flags;
-
-char			*ft_strdup(const char *src);
-char			ft_putchar(char l);
-#endif
+#include "ft_print.h"
