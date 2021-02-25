@@ -6,37 +6,29 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:23:44 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 21:35:22 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 21:38:28 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_print.h"
 
-int	ft_printffd(const char *str, va_list form)
-{
-	t_print			data;
-
-
-	
-	return (-1);
-}
-
-int	ft_printf(const char *string, ...)
+int	ft_printf(const char *fmt, ...)
 {
 	t_print				data;
 	const char			*stringdata;
 
 	data.strpos = 0;
-	while (str[data.strpos])
+	data.wordcount = 0;
+	while (fmt[data.strpos])
 	{
-		if (str[data.strpos] == '%')
+		if (fmt[data.strpos] == '%')
 		{
 			data.strpos++;
-			data.strpos = flags_parser(str, &data);
+			data.wordcount += flags_parser(fmt, &data);
 		}
 		else
 		{
-			ft_putchar(str[data.strpos]);
+			ft_putchar(fmt[data.strpos]);
 			data.strpos++;
 		}
 	}
