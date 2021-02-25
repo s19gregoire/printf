@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 21:13:33 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 21:14:23 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct	s_printtread
 {
 	t_bitflag	flags;
 	int			width;
+	int			preci;
 	int			count;
 	int			wordcount;
 	va_list		format;
