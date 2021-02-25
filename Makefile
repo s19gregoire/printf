@@ -41,6 +41,14 @@ LDFLAGS =
 # **************************************************************************** #
 
 SRCS =\
+	./src/extra/ft_putchar.c\
+	./src/extra/ft_putnbr_base.c\
+	./src/extra/strdup.c\
+	./src/extra/ft_strlen.c\
+	./src/parser/ft_conv_parse.c\
+	./src/parser/ft_flags_parse.c\
+	./src/init.c\
+	./src/ft_printf.c\
 
 HEADERS =\
 	./includes/ft_print.h\
