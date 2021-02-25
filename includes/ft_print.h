@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 20:39:12 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 21:04:18 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,25 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+typedef	int t_bitflag;
+
+enum e_bitflags
+{
+	F_SPC = 1,
+		
+}
+
 typedef struct	s_printtread
 {
+	t_bitflag	flags;
 	int			width;
 	int			count;
 	int			wordcount;
 	va_list		format;
 }				t_print;
-typedef struct	s_flagstread
-{
-	int			dotminus;
-	int			dotzero;
-	int			dotpoint;
-	int			dotstar;
-	int			dotwidth;
-	int			type;
-}				t_flagstread;
 
 char			*ft_strdup(const char *src);
 char			ft_putchar(char l);
 size_t			ft_strlen(const char *str);
 int				ft_putnbr_base(unsigned long long num, int b, const char *data);
-t_flagstread	ft_flags_initiator(void);
 #endif
