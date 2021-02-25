@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 21:10:12 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 21:11:59 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,5 @@ char			ft_putchar(char l);
 size_t			ft_strlen(const char *str);
 int				ft_putnbr_base(unsigned long long num, int b, const char *data);
 #endif
+
+alias autopush=git add . && git commit -m 'gregoire' && git push origin main
