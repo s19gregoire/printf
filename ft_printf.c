@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:48:13 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 12:54:41 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 15:15:19 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,10 @@ static int ft_printf_s(const char *fmt, va_list ap, int len) {
 	}
 	return ft_printf_lenght(fmt, ap, len);
 }
-
+int ft_flags(int *flags)
+{
+    
+}
 typedef int (*ft_print_dispatch_f)(const char *fmt, va_list ap, int len);
 
 static ft_print_dispatch_f const ft_print_dispatch[256] = {
@@ -94,9 +97,9 @@ static ft_print_dispatch_f const ft_print_dispatch[256] = {
 	['u'] = ft_printf_u,
 	['x'] = ft_printf_x,
 	['X'] = ft_printf_X,
-	['s'] = ft_printf_s,
+	['s'] = ft_printf_s
 };
-static int ft_while(const char *fmt, va_list ap, int len)
+static int ft_printf_lenghtsub(const char *fmt, va_list ap, int len)
 {
     int c;
     while (*fmt)
@@ -110,18 +113,23 @@ static int ft_while(const char *fmt, va_list ap, int len)
 			if (ft_print_dispatch[c] == NULL) {
 				if (c == '\0')
 					break;
-				ft_putchar(c);
+				if(isflag(c, ap, len) == NULL) 
+                    ft_putchar(c);
 				len++;
 			} else {
 				return ft_print_dispatch[c](fmt, ap, len);
 			}
+            
 		}
     }
     return (len);
 }
+
 static int ft_printf_lenght(const char *fmt, va_list ap, int len) {
-    
-	len = ft_while(fmt, ap, len);
+    int flags;
+
+    flags = 0;
+	len = ft_printf_lenghtsub(fmt, ap, len);
 	return len;
 }
 
@@ -139,9 +147,8 @@ int ft_printf(const char *string, ...) {
 }
 
 #include <stdio.h>
-#define TEST "%d", F_NEG
+#define TEST "%d", "t'est beau"
 int main(void)
 {
-    printf("\n stdio  %d\n", printf(TEST));
-  ft_printf("\n FT_42  %d \n", ft_printf(TEST));
+       ft_printf ("gregoire 😀");
 }
