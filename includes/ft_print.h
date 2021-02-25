@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 20:27:11 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 20:39:12 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 typedef struct	s_printtread
 {
 	int			width;
-	int			counter;
+	int			count;
+	int			wordcount;
 	va_list		format;
 }				t_print;
 typedef struct	s_flagstread
