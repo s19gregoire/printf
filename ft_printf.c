@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:23:44 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 21:20:24 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 21:25:35 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printffd(const char *str, va_list form)
 	{
 		if (!str[data.count])
 			break ;
-		else if (str[data.count] == '%' && str[data.count + 1])
+		else if (str[data.count] && str[data.count] == '%')
 		{
 			data.count++;
 			data.count = flags_parser(str, &data);
