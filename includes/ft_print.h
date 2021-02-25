@@ -6,7 +6,7 @@
 /*   By: gneve <gneve@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 18:30:26 by gneve             #+#    #+#             */
-/*   Updated: 2021/02/25 20:17:37 by gneve            ###   ########.fr       */
+/*   Updated: 2021/02/25 20:27:11 by gneve            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,13 @@ typedef struct	s_flagstread
 	int			dotzero;
 	int			dotpoint;
 	int			dotstar;
-}				t_flags;
+	int			dotwidth;
+	int			type;
+}				t_flagstread;
 
 char			*ft_strdup(const char *src);
 char			ft_putchar(char l);
 size_t			ft_strlen(const char *str);
 int				ft_putnbr_base(unsigned long long num, int b, const char *data);
+t_flagstread	ft_flags_initiator(void);
 #endif
